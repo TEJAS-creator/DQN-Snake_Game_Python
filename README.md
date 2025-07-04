@@ -30,6 +30,25 @@ In our case, the **agent is the snake**, and its goal is to **eat food without h
 
 ---
 
+---
+
+## 🧠 Model Details
+
+- **Input**: 11 features including:
+  - Food position relative to the snake head
+  - Snake’s current direction (up/down/left/right)
+  - Danger flags (collision with wall or self)
+  
+- **Output**: 4 values, one for each possible direction:
+  - Higher Q-value = more likely to choose that action
+  
+- **Algorithm**: Deep Q-Learning (DQN)
+
+- **Loss Function**: Mean Squared Error (MSE) – measures how far predicted Q-values are from the target
+
+- **Optimizer**: Adam – helps the model learn faster and more accurately
+
+
 ## 🧩 How it works (Simple Explanation)
 
 1. The snake (agent) sees:
