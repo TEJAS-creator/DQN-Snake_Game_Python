@@ -171,7 +171,7 @@ def train_one_episode():
     total_reward = 0
     canvas.delete("all")
     episode += 1
-    episode_label.config(text=f"Episode: {episode}")  # 👈 add this line
+    episode_label.config(text=f"Episode: {episode}") 
 
 
     def step_loop():
@@ -215,7 +215,7 @@ def train_one_episode():
                     loss.backward()
                     optimizer.step()
             epsilon = max(0.1, epsilon * 0.995)
-            root.after(500, train_one_episode)  # Start next episode
+            root.after(500, train_one_episode)  #  next episode starts
         else:
             root.after(SPEED, step_loop)
 
@@ -229,6 +229,6 @@ def update_plot():
     ax.set_ylim(0, max(10, max(scores) + 5))
     plot_canvas.draw()
 
-# Start training visually
+# Start training 
 train_one_episode()
 root.mainloop()
