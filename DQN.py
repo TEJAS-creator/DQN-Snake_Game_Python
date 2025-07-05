@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 GAME_WIDTH = 500
 GAME_HEIGHT = 500
 SPACE_SIZE = 40
-SPEED = 50
+SPEED = 30
 SNAKE_COLOR = "#00FF00"
 FOOD_COLOR = "#FF0000"
 BACKGROUND_COLOR = "#000000"
@@ -143,12 +143,11 @@ score_label = Label(root, text="Score: 0", font=("Arial", 16))
 score_label.pack()
 
 episode_label = Label(root, text="Episode: 0", font=("Arial", 16))
-episode_label.place(x=GAME_WIDTH + 50, y=10)
-
+episode_label.place(x=GAME_WIDTH + 50, y=2)
 
 
 # Matplotlib Plot in Tkinter
-fig, ax = plt.subplots(figsize=(5, 4))
+fig, ax = plt.subplots(figsize=(4, 4))
 score_plot, = ax.plot([], [], 'b-')
 ax.set_title("Episode Scores")
 ax.set_xlabel("Episode")
